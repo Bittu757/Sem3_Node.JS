@@ -1,0 +1,15 @@
+console.log("Start");
+
+setTimeout(() => {
+  console.log("First Timer");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Promise Callback");
+
+  setTimeout(() => {
+    console.log("Second Timer");
+  }, 0);
+});
+
+console.log("End");
